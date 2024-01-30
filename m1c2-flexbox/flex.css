@@ -11,7 +11,7 @@
     height: 100%;
 }
 
-.flexOne > .square {
+:is(.flexOne, .flexFour) > .square {
     margin: 5px;
 }
 
@@ -24,19 +24,18 @@
     justify-content: flex-end;
 }
 
+.flexFour , .flexFive{
+    width: 350px;  
+}
+
 .flexFour{
-    width: 350px;
     flex-wrap: wrap;
 }
 
 .flexFour >.square{
-    margin: 5px;
     background-color: #3d8b6d;
 }
 
-.flexFive{
-    width: 350px;
-}
 .flexFive >.item{
     margin: 2px;
     height: 100px;
@@ -49,13 +48,15 @@
     flex-grow: 2;
 }
 
-.flexSix{
+.flexSix, .flexSeven, .flexEight{
     width: 500px;
     height: 400px;
-    background-color: #f1f1f1;
-    flex-direction: column;
     justify-content: space-between;
+}
 
+.flexSix {
+    background-color: #f1f1f1;
+    flex-direction: column; 
 }
 
 .one ,.two, .three, .four {
@@ -67,7 +68,7 @@
 }
 
 /* presentation */
-body > :is(.flexSix,.flexSeven)> :is(.two ,.four){
+:is(.flexSix,.flexSeven)> :is(.two ,.four){
     background-color: #d6d6d6;
 }
 
@@ -78,13 +79,7 @@ body > :is(.flexSix,.flexSeven)> :is(.two ,.four){
 .flexSix > .three{
     justify-content: space-evenly;
 }
-
-.flexSeven, .flexEight{
-    height: 400px;
-    width: 500px;
-    justify-content: space-between;
-}
-
+    
 .flexSeven > *{
     flex-direction: column;
 }
