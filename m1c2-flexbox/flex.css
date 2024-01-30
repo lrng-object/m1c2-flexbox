@@ -1,0 +1,144 @@
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #73dab2;
+    margin: 2px;
+}
+
+.flex {
+    margin: 10px;
+    display: flex;
+    height: 100%;
+}
+
+.flexOne > .square {
+    margin: 5px;
+}
+
+.flexTwo {
+    flex-direction: column;
+}
+
+.flexThree{
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.flexFour{
+    width: 350px;
+    flex-wrap: wrap;
+}
+
+.flexFour >.square{
+    margin: 5px;
+    background-color: #3d8b6d;
+}
+
+.flexFive{
+    width: 350px;
+}
+.flexFive >.item{
+    margin: 2px;
+    height: 100px;
+    width: 100px;
+    background-color: #0b6643;
+
+}
+
+#grow{
+    flex-grow: 2;
+}
+
+.flexSix{
+    width: 500px;
+    height: 400px;
+    background-color: #f1f1f1;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.one ,.two, .three, .four {
+    display:flex;
+}
+
+.flexSix > .one{
+    justify-content: space-around;
+}
+
+/* presentation */
+body > :is(.flexSix,.flexSeven)> :is(.two ,.four){
+    background-color: #d6d6d6;
+}
+
+.flexSix > .two{
+    justify-content: space-between;
+}
+
+.flexSix > .three{
+    justify-content: space-evenly;
+}
+
+.flexSeven, .flexEight{
+    height: 400px;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.flexSeven > *{
+    flex-direction: column;
+}
+
+.flexSeven > .one  {
+    justify-content: center;
+}
+
+.flexSeven > .two {
+    justify-content: flex-end;
+}
+
+.flexSeven > .three  {
+    justify-content: flex-start;
+}
+
+.flexSeven > .four {
+    justify-content: space-between;
+}
+
+.flexEight, .flexNine  {
+    /* shorthand for #eeeeee */
+    background-color: #eee;
+}
+
+.flexEight{
+    height: 400px;
+    width: 300px;
+}
+
+/* override default margin */
+.flexEight > * >.square{
+    margin: 0px;
+}
+
+.flexEight> .one{
+    align-items: center;
+}
+
+.flexEight> .two{
+    align-items: flex-end;
+}
+
+.flexEight> .three{
+    align-items: flex-start;
+}
+
+.flexNine {
+    width: 450px;
+    height: 250px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#special {
+    align-self: flex-end;
+}
